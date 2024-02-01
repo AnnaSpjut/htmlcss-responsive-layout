@@ -8,14 +8,22 @@
 header{
   background-color: #0084FD;
   color: white;
-}
-
-.mobile{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding: 5px;
 }
+
+.menu-desktop a{
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.menu-desktop{
+  display: none;
+}
+
 
 
 
@@ -23,3 +31,17 @@ header{
 
 
 /* Media Query */
+
+@media screen and (min-width:768px){
+  .menu-desktop{
+    display: block; 
+  }
+
+  .menu-mobile{
+    display: none;
+  }
+}
+
+@media screen and (min-width:1200px){
+ 
+}
