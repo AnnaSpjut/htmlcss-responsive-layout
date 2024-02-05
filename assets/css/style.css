@@ -4,7 +4,16 @@
   box-sizing: border-box;
 }
 
+:root {
+  --blue: #0084FD;
+  --light-blue: #B5DDFF; 
+  --violet: #9792E4;
+  --orange: #FDC15F;
+  --demo-text: #5A6E7F;
+}
+
 body{
+  font-family: 'PT Sans', sans-serif;;
   background-color: white;
 }
 
@@ -26,16 +35,17 @@ body{
   flex-wrap: wrap;
 }
 
-
 .col{
   width: 100%;
   padding 10px;
 } 
 
+
+
+
 /* debug */
 .col{
   border: 1px solid black;
-  height: 30px;
 }
 
 
@@ -70,8 +80,77 @@ header{
 }
 
 #demo .container-big .col{
-  background-color: #B5DDFF;
+  background-color: white;
 }
+
+.card-demo,
+.card-clean,
+.card-web,
+.card-development,
+.card-branding{
+  background-color: var(--light-blue);
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  justify-content: center;
+  margin: 30px;
+  border-radius: 15px;
+}
+
+.card-demo img{
+  max-width: 100%;
+}
+
+#demo h2{
+  color: var(--blue);
+  margin-bottom: 40px;
+}
+
+.card-demo p{
+  color: var(--demo-text);
+  font-weight: bold;
+  line-height: 30px;
+}
+
+.card-clean p,
+.card-web p,
+.card-development p,
+.card-branding p{
+  color: var(--demo-text);
+  font-weight: bold;
+  line-height: 30px;
+}
+.card-text{
+  text-align: center;
+}
+
+.card-clean i,
+.card-web i,
+.card-development i,
+.card-branding i{
+  color: var(--blue);
+  text-align: center;
+  font-size: 80px;
+  margin-bottom: 30px;
+}
+
+#demo button{
+  background-color: var(--blue);
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 12px 50px;
+  border-radius: 25px;
+  letter-spacing: 3px;
+  border: none;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+ #demo i{
+  margin-right: 5px;
+ }
+
 
 #jumbotron .container-big{
   background-color: #9792E4;
@@ -117,11 +196,15 @@ footer{
 
   #demo .col{
     width: calc(100% / 3);
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 
   #demo .col:first-child{
     width: calc(100% / 1.5);
   }
+
+  
 
   #benefits .col{
     width: calc(100% / 2);
@@ -147,6 +230,10 @@ footer{
 
   .menu-mobile{
     display: none;
+  }
+
+  .card-demo{
+    flex-direction: row;
   }
 
   #jumbotron .col{
